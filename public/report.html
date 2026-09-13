@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Startup Idea Validator Report</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      body {
+        margin: 0;
+        background: #f8fafc;
+      }
+
+      .report-page {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 32px 20px 72px;
+      }
+
+      .report-header {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 16px 0 20px;
+        background: rgba(248, 250, 252, 0.9);
+        backdrop-filter: blur(8px);
+      }
+
+      .report-back-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 10px 14px;
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        background: white;
+        color: var(--text);
+        font-weight: 700;
+      }
+
+      .report-page-title {
+        margin: 0;
+        font-size: clamp(1.6rem, 3vw, 2.3rem);
+      }
+
+      .report-detail {
+        display: grid;
+        gap: 1rem;
+      }
+
+      .report-download-btn {
+        position: fixed;
+        left: 50%;
+        bottom: 28px;
+        transform: translateX(-50%);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 220px;
+        height: 52px;
+        padding: 0 1.15rem;
+        border: none;
+        border-radius: 999px;
+        background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+        color: white;
+        font-weight: 800;
+        box-shadow: 0 16px 32px rgba(79, 70, 229, 0.28);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="report-page">
+      <header class="report-header">
+        <button type="button" id="report-back-btn" class="report-back-btn">← Back</button>
+        <h1 id="report-page-title" class="report-page-title">Report</h1>
+      </header>
+
+      <main id="report-detail" class="report-detail"></main>
+    </div>
+
+    <button type="button" id="report-download-btn" class="report-download-btn">Download report</button>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

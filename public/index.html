@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Startup Idea Validator</title>
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+  <!-- ================= AUTH SCREEN ================= -->
+
+  <section id="login-section" class="auth-screen">
+
+    <!-- LEFT HERO -->
+
+    <div class="auth-hero">
+
+      <div class="auth-hero-content">
+
+        <div class="logo-box">
+          SI
+        </div>
+
+        <span class="hero-label">
+          AI-POWERED STARTUP INTELLIGENCE
+        </span>
+
+        <h1>
+          Turn your
+          <span>ideas</span>
+          into opportunities.
+        </h1>
+
+        <p>
+          Discover startup ideas that match your skills,
+          validate them against market signals and make
+          smarter decisions before you build.
+        </p>
+
+        <div class="feature-list">
+
+          <div class="feature">
+            <span class="feature-icon">✦</span>
+
+            <div>
+              <strong>AI Idea Generation</strong>
+
+              <small>
+                Generate startup concepts personalized to you.
+              </small>
+            </div>
+          </div>
+
+          <div class="feature">
+            <span class="feature-icon">◈</span>
+
+            <div>
+              <strong>Market Validation</strong>
+
+              <small>
+                Analyze competition and market opportunity.
+              </small>
+            </div>
+          </div>
+
+          <div class="feature">
+            <span class="feature-icon">↗</span>
+
+            <div>
+              <strong>Actionable Insights</strong>
+
+              <small>
+                Get practical recommendations for your idea.
+              </small>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="hero-orb orb-one"></div>
+      <div class="hero-orb orb-two"></div>
+      <div class="hero-grid"></div>
+
+    </div>
+
+
+    <!-- RIGHT AUTH -->
+
+    <div class="auth-container">
+
+      <div class="auth-card">
+
+        <div class="mobile-logo">
+
+          <div class="logo-box small">
+            SI
+          </div>
+
+          <strong>
+            Startup Idea Validator
+          </strong>
+
+        </div>
+
+
+        <div class="auth-heading">
+
+          <span
+            id="auth-eyebrow"
+            class="auth-eyebrow">
+            WELCOME BACK
+          </span>
+
+          <h2 id="auth-title">
+            Sign in to your account
+          </h2>
+
+          <p id="auth-description">
+            Continue building and validating your next big idea.
+          </p>
+
+        </div>
+
+
+        <!-- SIGN IN / SIGN UP -->
+
+        <div class="auth-toggle">
+
+          <button
+            type="button"
+            id="signin-mode-btn"
+            class="toggle-btn active">
+
+            Sign In
+
+          </button>
+
+          <button
+            type="button"
+            id="signup-mode-btn"
+            class="toggle-btn">
+
+            Sign Up
+
+          </button>
+
+        </div>
+
+
+        <!-- AUTH FORM -->
+
+        <form
+          id="login-form"
+          class="auth-form">
+
+          <div class="field">
+
+            <label for="username">
+              Username
+            </label>
+
+            <div class="input-box">
+
+              <span>◎</span>
+
+              <input
+                type="text"
+                id="username"
+                placeholder="Enter your username"
+                autocomplete="username"
+                required
+              />
+
+            </div>
+
+          </div>
+
+
+          <div class="field">
+
+            <div class="label-row">
+
+              <label for="password">
+                Password
+              </label>
+
+              <button
+                type="button"
+                id="forgot-password"
+                class="forgot-btn">
+
+                Forgot password?
+
+              </button>
+
+            </div>
+
+            <div class="input-box">
+
+              <span>●</span>
+
+              <input
+                type="password"
+                id="password"
+                placeholder="Enter your password"
+                autocomplete="current-password"
+                required
+              />
+
+              <button
+                type="button"
+                id="password-toggle"
+                class="password-toggle">
+
+                Show
+
+              </button>
+
+            </div>
+
+          </div>
+
+
+          <div class="remember-row">
+
+            <label class="remember-label">
+
+              <input
+                type="checkbox"
+                id="remember-me"
+              />
+
+              <span></span>
+
+              Remember me
+
+            </label>
+
+          </div>
+
+
+          <div class="auth-actions">
+
+            <button
+              type="button"
+              id="admin-login-btn"
+              class="auth-secondary-btn">
+
+              Admin Login
+
+            </button>
+
+            <button
+              type="submit"
+              id="login-btn"
+              class="auth-submit">
+
+              <span id="auth-button-text">
+                Sign In
+              </span>
+
+              <span class="arrow">
+                →
+              </span>
+
+            </button>
+
+          </div>
+
+        </form>
+
+
+        <div
+          id="admin-login-panel"
+          class="admin-login-panel hidden">
+
+          <div class="admin-login-header">
+            <span class="admin-pill">ADMIN ACCESS</span>
+            <h3>Admin login</h3>
+          </div>
+
+          <div class="field">
+
+            <label for="admin-username">
+              Admin username
+            </label>
+
+            <div class="input-box">
+
+              <span>◎</span>
+
+              <input
+                type="text"
+                id="admin-username"
+                placeholder="Enter admin username"
+                autocomplete="username"
+                value="admin"
+              />
+
+            </div>
+
+          </div>
+
+          <div class="field">
+
+            <label for="admin-password">
+              Admin password
+            </label>
+
+            <div class="input-box">
+
+              <span>●</span>
+
+              <input
+                type="password"
+                id="admin-password"
+                placeholder="Enter admin password"
+                autocomplete="current-password"
+                value="admin123"
+              />
+
+            </div>
+
+          </div>
+
+          <div class="admin-login-actions">
+
+            <button
+              type="button"
+              id="admin-login-submit"
+              class="auth-submit admin-login-submit">
+
+              <span>Login as Admin</span>
+
+              <span class="arrow">→</span>
+
+            </button>
+
+            <button
+              type="button"
+              id="back-to-user-login"
+              class="admin-back-btn">
+
+              Back to user login
+
+            </button>
+
+          </div>
+
+        </div>
+
+
+        <div
+          id="auth-status"
+          class="auth-status">
+        </div>
+
+
+        <div class="secure-note">
+
+          <span>🔒</span>
+
+          Your account and reports are securely protected.
+
+        </div>
+
+
+        <p class="auth-switch-text">
+
+          <span id="bottom-question">
+            Don't have an account?
+          </span>
+
+          <button
+            type="button"
+            id="bottom-switch"
+            class="link-btn">
+
+            Create one
+
+          </button>
+
+        </p>
+
+
+        <p class="admin-note">
+
+          Administrator accounts have access
+          to the admin dashboard.
+
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= APPLICATION ================= -->
+
+  <div
+    id="app-container"
+    class="hidden">
+
+    <!-- TOPBAR -->
+
+    <nav
+      class="topbar hidden"
+      id="topbar">
+
+      <div class="topbar-inner">
+
+        <div class="brand-bar">
+
+          <span class="brand-mark">
+            SI
+          </span>
+
+          <div>
+
+            <p class="brand-name">
+              Startup Idea Validator
+            </p>
+
+            <p class="brand-tag">
+              AI-powered startup intelligence
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="user-actions">
+
+          <div class="user-greeting-wrapper">
+
+            <div class="user-avatar">
+
+              <span id="user-avatar">
+                U
+              </span>
+
+            </div>
+
+            <div>
+
+              <div
+                id="user-greeting"
+                class="user-greeting">
+              </div>
+
+              <small>
+                Account
+              </small>
+
+            </div>
+
+          </div>
+
+
+          <button
+            type="button"
+            id="logout-btn"
+            class="logout-btn">
+
+            Logout
+
+          </button>
+
+        </div>
+
+      </div>
+
+    </nav>
+
+
+    <!-- MAIN -->
+
+    <main>
+
+      <section
+        id="dashboard-section"
+        class="dashboard hidden">
+
+
+        <!-- DASHBOARD HERO -->
+
+        <div class="dashboard-welcome">
+
+          <div>
+
+            <span class="dashboard-label">
+              STARTUP COMMAND CENTER
+            </span>
+
+            <h2>
+              Build your next
+              <span>big idea.</span>
+            </h2>
+
+            <p>
+              Generate, validate and analyze startup opportunities
+              using AI-powered market intelligence.
+            </p>
+
+          </div>
+
+          <div class="welcome-symbol">
+            ✦
+          </div>
+
+        </div>
+
+
+        <!-- USER DASHBOARD -->
+
+        <div
+          id="user-dashboard"
+          class="dashboard-grid">
+
+          <!-- GENERATOR -->
+
+          <section
+            class="input-panel generator-panel">
+
+            <div class="panel-heading">
+
+              <div class="panel-icon">
+                ✦
+              </div>
+
+              <div>
+
+                <span class="panel-label">
+                  AI IDEA GENERATOR
+                </span>
+
+                <h2>
+                  Build your startup report
+                </h2>
+
+                <p>
+                  Tell us about your interests, skills and
+                  domain to discover suitable opportunities.
+                </p>
+
+              </div>
+
+            </div>
+
+
+            <form id="idea-form">
+
+              <div class="form-field full">
+
+                <label for="interests">
+                  Interests
+                </label>
+
+                <input
+                  type="text"
+                  id="interests"
+                  placeholder="e.g. fitness, AI, sustainability"
+                />
+
+              </div>
+
+
+              <div class="form-field full">
+
+                <label for="skills">
+                  Skills
+                </label>
+
+                <input
+                  type="text"
+                  id="skills"
+                  placeholder="e.g. marketing, coding, operations"
+                />
+
+              </div>
+
+
+              <div class="form-field">
+
+                <label for="domain">
+                  Domain
+                </label>
+
+                <input
+                  type="text"
+                  id="domain"
+                  placeholder="e.g. education, fintech"
+                />
+
+              </div>
+
+
+              <div class="form-field">
+
+                <label for="budget">
+
+                  Budget
+
+                  <span>
+                    Optional
+                  </span>
+
+                </label>
+
+                <input
+                  type="text"
+                  id="budget"
+                  placeholder="e.g. ₹50,000"
+                />
+
+              </div>
+
+
+              <button
+                type="submit"
+                id="submit-btn"
+                class="generate-btn">
+
+                <span>✦</span>
+
+                Generate & Validate Ideas
+
+                <span>→</span>
+
+              </button>
+
+            </form>
+
+
+            <div id="status"></div>
+
+          </section>
+
+
+          <!-- RECENT REPORTS -->
+
+          <section class="input-panel">
+
+            <div class="panel-heading">
+
+              <span class="panel-label">
+                WORKSPACE
+              </span>
+
+              <h2>
+                Recent Reports
+              </h2>
+
+              <p>
+                Review your previous startup validation reports.
+              </p>
+
+            </div>
+
+
+            <button
+              type="button"
+              id="load-reports-btn"
+              class="secondary-btn">
+
+              ↻ &nbsp; Load recent reports
+
+            </button>
+
+
+            <div
+              id="recent-reports-list"
+              class="recent-list">
+            </div>
+
+          </section>
+
+        </div>
+
+
+        <!-- ADMIN DASHBOARD -->
+
+        <div
+          id="admin-dashboard"
+          class="dashboard-grid hidden">
+
+          <!-- SYSTEM OVERVIEW -->
+
+          <section class="input-panel">
+
+            <div class="panel-heading">
+
+              <span class="panel-label">
+                ADMIN CONTROL CENTER
+              </span>
+
+              <h2>
+                System Overview
+              </h2>
+
+              <p>
+                Monitor platform activity and saved reports.
+              </p>
+
+            </div>
+
+
+            <div class="admin-summary">
+
+              <div class="admin-stat">
+
+                <span>
+                  ◇
+                </span>
+
+                <div>
+
+                  <p>
+                    Total Reports
+                  </p>
+
+                  <h3 id="total-reports-count">
+                    0
+                  </h3>
+
+                </div>
+
+              </div>
+
+
+              <div class="admin-stat">
+
+                <span>
+                  ◎
+                </span>
+
+                <div>
+
+                  <p>
+                    Active Users
+                  </p>
+
+                  <h3 id="active-users-count">
+                    0
+                  </h3>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </section>
+
+
+          <!-- ADMIN REPORTS -->
+
+          <section class="input-panel">
+
+            <div class="panel-heading">
+
+              <span class="panel-label">
+                SYSTEM ACTIVITY
+              </span>
+
+              <h2>
+                All Saved Reports
+              </h2>
+
+              <p>
+                View reports generated by platform users.
+              </p>
+
+            </div>
+
+
+            <button
+              type="button"
+              id="load-admin-reports-btn"
+              class="secondary-btn">
+
+              ↻ &nbsp; Refresh reports
+
+            </button>
+
+
+            <div
+              id="admin-reports-list"
+              class="recent-list">
+            </div>
+
+          </section>
+
+        </div>
+
+
+        <!-- RESULTS -->
+
+        <section
+          id="results"
+          class="results-panel">
+        </section>
+
+      </section>
+
+    </main>
+
+  </div>
+
+
+  <!-- JAVASCRIPT -->
+
+  <script src="js/script.js"></script>
+
+</body>
+</html>
